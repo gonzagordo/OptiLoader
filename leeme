@@ -1,0 +1,31 @@
+Instrucciones
+comprobado en siguiente escenario:
+Arduino uno original como maestro cargando optiboot en arduino nano.
+
+-selecciono en tarjeta arduino uno pues lo que grabo es un scketch en el uno
+-selecciono puerto serie del uno
+-programador el normal avr isp (no deja de ser un scketch)
+
+el arduino uno se ha convertido en un flash bootloader, cada vez que se conecte
+un esclavo al icsp y se resetee al uno grabara un boloader al esclavo
+aun sin conexion a un pc 
+de todos modos para supervisar la grabacion se puede conectar al uno al puerto serie a 19200
+baudios y se ve la operacion
+
+conexion:
+co el uno grabado y listo ...
+
+-conecto a traves de cabezal icsp en los dos casos todos los pines de igual a igual
+menos el rerset
+-conecto reset de nano(a grabar) a pin 10 del master(uno)
+
+pulso reset del arduino uno y en segundos listo.
+
+
+------ojo------ a partir de ahi el nano solo se le reconoce seleccionando la tarjeta
+como "arduino uno"
+
+wdt probado (prueba reset)
+tiempo de rearme breve +/- 2 segundos
+
+
